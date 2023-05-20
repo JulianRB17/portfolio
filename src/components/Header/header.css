@@ -1,0 +1,52 @@
+.header {
+  display: flex;
+  position: fixed;
+  height: 6vh;
+  z-index: 3;
+  width: 100vw;
+  justify-content: center;
+  border-bottom: 1px solid gray;
+  background-color: beige;
+  opacity: 0.8;
+}
+
+.header__container {
+  width: 45%;
+  display: flex;
+}
+
+.header__element {
+  margin: 10px auto;
+  outline: none;
+}
+
+.header__center {
+  position: relative;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header__center-square {
+  position: fixed;
+}
+
+.header__center-circle {
+  position: fixed;
+}
+
+.header__center-orange {
+  position: fixed;
+}
+
+.header__scroller {
+  position: fixed;
+  height: 4px;
+  opacity: 0.7;
+  width: 100vw;
+  background-color: orange;
+  top: 46px;
+  z-index: 1;
+  transform-origin: 0%;
+}

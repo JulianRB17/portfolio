@@ -1,0 +1,55 @@
+.contact {
+  background-image: url(../../images/colors.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  height: 100vh;
+}
+
+.contact__container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 30px 120px;
+  border: 1px solid gray;
+  margin: auto;
+  margin-top: 0;
+}
+
+.contact__overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: aliceblue;
+  opacity: 0.5;
+}
+
+.contact__title {
+  margin: 0;
+  padding: 0 0 25px;
+  z-index: 1;
+  align-self: center;
+}
+
+.contact__subtitle {
+  margin: auto;
+  color: rgb(62, 96, 188);
+  /* rgb(0, 247, 255); */
+}
+
+.contact__element {
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  padding-top: 15px;
+}
+
+.contact__btn {
+  margin-left: 10px;
+  font-family: Lemon;
+}
