@@ -1,8 +1,13 @@
-import React from 'react';
 import photo from '../../images/retrato.png';
 import { easeInOut, motion, spring } from 'framer-motion';
 
-export default function Hero({ scrollVariants }) {
+export default function Hero({ scrollVariants, setMousePosition }) {
+  const handleMouseMove = (event) => {
+    const x = event.clientX;
+    const y = event.clientY;
+    setMousePosition([x, y]);
+  };
+
   const titleVariants = {
     initial: {
       y: -50,
@@ -62,7 +67,7 @@ export default function Hero({ scrollVariants }) {
   };
 
   return (
-    <section className="hero">
+    <section className="hero" onMouseMove={handleMouseMove} id="hero">
       <div className="hero__presentation-container">
         <motion.h1
           className="hero__name"
@@ -134,7 +139,7 @@ export default function Hero({ scrollVariants }) {
           this?
         </p>
         <p className="hero__description">
-          At the end, human creativity is the basis to our development.
+          Human creativity is the basis to our development.
         </p>
         <p className="hero__description">
           It was not easy for me to be here: I believe in hard work and in

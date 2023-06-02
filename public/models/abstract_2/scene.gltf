@@ -1,0 +1,288 @@
+{
+  "accessors": [
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 1680,
+      "max": [
+        305.319580078125,
+        308.9300842285156,
+        540.29248046875
+      ],
+      "min": [
+        -313.9839172363281,
+        -310.3734130859375,
+        3.9600000381469727
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 0,
+      "componentType": 5125,
+      "count": 4032,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 20160,
+      "componentType": 5126,
+      "count": 65532,
+      "max": [
+        310.1695861816406,
+        313.78009033203125,
+        544.2525024414063
+      ],
+      "min": [
+        -318.8338928222656,
+        -315.223388671875,
+        0.0
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 806544,
+      "componentType": 5126,
+      "count": 65532,
+      "max": [
+        0.9961975812911987,
+        0.9961975812911987,
+        1.0
+      ],
+      "min": [
+        -0.9961975812911987,
+        -0.9961975812911987,
+        -1.0
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 16128,
+      "componentType": 5125,
+      "count": 229974,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 1592928,
+      "componentType": 5126,
+      "count": 30704,
+      "max": [
+        310.1695861816406,
+        313.78009033203125,
+        544.2525024414063
+      ],
+      "min": [
+        -318.8338928222656,
+        -305.4225769042969,
+        0.0
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 1961376,
+      "componentType": 5126,
+      "count": 30704,
+      "max": [
+        0.9961975812911987,
+        0.9961975812911987,
+        1.0
+      ],
+      "min": [
+        -0.9961975812911987,
+        -0.9961975812911987,
+        -1.0
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 936024,
+      "componentType": 5125,
+      "count": 101802,
+      "type": "SCALAR"
+    }
+  ],
+  "asset": {
+    "extras": {
+      "author": "tahsinpulok (https://sketchfab.com/tahsinpulok)",
+      "license": "CC-BY-NC-ND-4.0 (http://creativecommons.org/licenses/by-nc-nd/4.0/)",
+      "source": "https://sketchfab.com/3d-models/abstract-2-42d2b7e6b3d542f6a7ed8a828b82fce0",
+      "title": "Abstract 2"
+    },
+    "generator": "Sketchfab-13.28.0",
+    "version": "2.0"
+  },
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 1343232,
+      "name": "floatBufferViews",
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteLength": 2329824,
+      "byteOffset": 1343232,
+      "byteStride": 12,
+      "name": "floatBufferViews",
+      "target": 34962
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 3673056,
+      "uri": "scene.bin"
+    }
+  ],
+  "materials": [
+    {
+      "name": "edge_color000255",
+      "pbrMetallicRoughness": {
+        "metallicFactor": 0.0,
+        "roughnessFactor": 0.6
+      }
+    },
+    {
+      "name": "material",
+      "pbrMetallicRoughness": {
+        "metallicFactor": 0.0,
+        "roughnessFactor": 0.6
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "name": "Material2",
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 0
+          },
+          "indices": 1,
+          "material": 0,
+          "mode": 1
+        }
+      ]
+    },
+    {
+      "name": "Material2",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 3,
+            "POSITION": 2
+          },
+          "indices": 4,
+          "material": 1,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "Material2",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 6,
+            "POSITION": 5
+          },
+          "indices": 7,
+          "material": 1,
+          "mode": 4
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "children": [
+        1
+      ],
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        2.220446049250313e-16,
+        -1.0,
+        0.0,
+        0.0,
+        1.0,
+        2.220446049250313e-16,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "Sketchfab_model"
+    },
+    {
+      "children": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "name": "Collada visual scene group"
+    },
+    {
+      "mesh": 0,
+      "name": "Material2"
+    },
+    {
+      "mesh": 1,
+      "name": "Material2"
+    },
+    {
+      "mesh": 2,
+      "name": "Material2"
+    },
+    {
+      "children": [
+        6
+      ],
+      "name": "SketchUp"
+    },
+    {
+      "children": [
+        7
+      ],
+      "matrix": [
+        -0.8575905,
+        -0.5143331,
+        0.0,
+        0.0,
+        0.5143195,
+        -0.8575677,
+        0.007284464,
+        0.0,
+        -0.003746641,
+        0.006247087,
+        0.9999735,
+        0.0,
+        25.11953,
+        70.06839,
+        1796.895,
+        1.0
+      ],
+      "name": "skp_camera_Last_Saved_SketchUp_View"
+    },
+    {
+      "name": "ID1"
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "Sketchfab_Scene",
+      "nodes": [
+        0
+      ]
+    }
+  ]
+}

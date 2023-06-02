@@ -1,13 +1,13 @@
 .header {
   display: flex;
   position: fixed;
-  height: 6vh;
+  height: 46px;
   z-index: 3;
   width: 100vw;
   justify-content: center;
   border-bottom: 1px solid gray;
   background-color: beige;
-  opacity: 0.8;
+  opacity: 0.9;
 }
 
 .header__container {
@@ -47,6 +47,13 @@
   width: 100vw;
   background-color: orange;
   top: 46px;
-  z-index: 1;
+  z-index: 2;
   transform-origin: 0%;
+}
+
+@media screen and (max-width: 550px) {
+  .header__scroller {
+    display: hidden;
+    top: 0;
+  }
 }

@@ -4,8 +4,36 @@ import Projects from '../Projects/Projects';
 import Contact from '../Contact/Contact';
 import Header from '../Header/Header';
 import './App.css';
+import AbstractHero from '../AbstractHero/AbstractHero';
+import { useState, useRef, useEffect } from 'react';
 
 function App() {
+  const [mousePosition, setMousePosition] = useState();
+  const [windowDimensions, setWindowDimensions] = useState(
+    getWindowDimensions()
+  );
+  const heroRef = useRef(null);
+  const aboutRef = useRef(null);
+  const projectsRef = useRef(null);
+  const contactRef = useRef(null);
+
+  function getWindowDimensions() {
+    const { innerWidth: width, innerHeight: height } = window;
+    return {
+      width,
+      height,
+    };
+  }
+
+  useEffect(() => {
+    function handleResize() {
+      setWindowDimensions(getWindowDimensions());
+    }
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, [window.innerWidth]);
+
   const scrollVariants = {
     initial: { opacity: 1, y: -20 },
     view: {
@@ -17,21 +45,38 @@ function App() {
   const btnVariants = {
     hover: {
       scale: 1.1,
-      boxShadow: '0 0 5px orange',
+      boxShadow: '0 0 5px #0aaef7',
     },
     tap: {
       scale: 0.9,
-      boxShadow: '0 0 10px 2px orange',
+      boxShadow: '0 0 10px 2px #0aaef7',
     },
   };
 
   return (
     <>
-      <Header />
-      <Hero scrollVariants={scrollVariants} />
-      <About scrollVariants={scrollVariants} />
-      <Projects scrollVariants={scrollVariants} btnVariants={btnVariants} />
-      <Contact scrollVariants={scrollVariants} btnVariants={btnVariants} />
+      <Header
+        refs={{ heroRef, aboutRef, contactRef, projectsRef }}
+        windowDimensions={windowDimensions}
+      />
+      <section className="hero-container" ref={heroRef}>
+        <AbstractHero
+          mousePosition={mousePosition}
+          windowDimensions={windowDimensions}
+        />
+        <Hero
+          scrollVariants={scrollVariants}
+          setMousePosition={setMousePosition}
+        />
+      </section>
+      <About scrollVariants={scrollVariants} aboutRef={aboutRef} />
+      <Projects
+        scrollVariants={scrollVariants}
+        btnVariants={btnVariants}
+        projectsRef={projectsRef}
+        windowDimensions={windowDimensions}
+      />
+      <Contact scrollVariants={scrollVariants} contactRef={contactRef} />
     </>
   );
 }

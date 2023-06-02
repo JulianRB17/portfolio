@@ -4,8 +4,10 @@ import orange from '../../images/orange.svg';
 import React from 'react';
 import { motion, useScroll } from 'framer-motion';
 
-export default function Header() {
+export default function Header({ refs, windowDimensions }) {
   const { scrollYProgress } = useScroll();
+
+  const { projectsRef, heroRef, contactRef, aboutRef } = refs;
 
   const btnVariants = {
     initial: {
@@ -21,30 +23,39 @@ export default function Header() {
 
     hover: {
       scale: 1.3,
-      textShadow: '0 0 3px orange',
+      textShadow: '0 0 3px #0aaef7',
       //   color: 'rgb(62, 96, 188)',
     },
     tap: {
       scale: 0.8,
       //   color: 'rgb(62, 96, 188)',
     },
+    hidden: { display: 'none', opacity: 0 },
   };
 
   const headerVariants = {
     initial: { height: '100vh', opacity: 1 },
     height: {
-      height: 45,
+      height: 46,
       transition: { delay: 2.5, duration: 1.5 },
     },
-    view: { opacity: 0.8, transition: { delay: 3.5, duration: 1 } },
+    view: { opacity: 0.9, transition: { delay: 3.5, duration: 1 } },
+    viewSmall: { height: 0, transition: { delay: 3.5, duration: 1 } },
+    hidden: { display: 'none', opacity: 0 },
   };
 
   const squareVariants = {
     initial: { height: '75vh' },
     view: {
       rotate: [0, 360, 180, 0],
-      height: ['75vh', '75vh', '75vh', '6vh'],
+      height: ['80vh', '60vh', '80vh', '6vh'],
       maxHeight: [1000, 1000, 1000, 40],
+      transition: { duration: 3.5 },
+    },
+    initialSmall: { width: '75vh' },
+    viewSmall: {
+      rotate: [0, 360, 180, 0],
+      width: ['80vw', '60vw', '80vw', '0vw'],
       transition: { duration: 3.5 },
     },
   };
@@ -53,8 +64,15 @@ export default function Header() {
     initial: { height: '75vh' },
     view: {
       rotate: [0, 45, 90, 180],
-      height: ['75vh', '75vh', '75vh', '6vh'],
+      height: ['60vh', '80vh', '60vh', '6vh'],
       maxHeight: [1000, 1000, 1000, 40],
+      transition: { duration: 3.5 },
+    },
+
+    initialSmall: { width: '75vw' },
+    viewSmall: {
+      rotate: [0, 45, 90, 180],
+      width: ['60vw', '80vw', '60vw', '0vw'],
       transition: { duration: 3.5 },
     },
   };
@@ -67,13 +85,22 @@ export default function Header() {
       maxHeight: [1000, 1000, 1000, 40],
       transition: { duration: 3.5 },
     },
+    initialSmall: { width: '75vw' },
+    viewSmall: {
+      scale: [1, 0.8, 1.4, 1],
+      width: ['75vw', '75vw', '75vw', '0vw'],
+      transition: { duration: 3.5 },
+    },
   };
 
   const scrollVariants = {
     initial: { opacity: 0 },
     view: { opacity: 1 },
-    // scale: { scaleX: scrollYProgress },
     transition: { duration: 3.5 },
+  };
+
+  const handleClick = (section) => {
+    window.scrollTo({ behavior: 'smooth', top: section.current.offsetTop });
   };
 
   return (
@@ -82,26 +109,30 @@ export default function Header() {
         className="header"
         variants={headerVariants}
         initial="initial"
-        animate={['view', 'height']}
+        animate={
+          windowDimensions.width > 550 ? ['view', 'height'] : 'viewSmall'
+        }
       >
         <div className="header__container">
           <motion.button
             className="header__element"
             variants={btnVariants}
-            initial="initial"
-            animate="view"
+            initial={windowDimensions.width > 550 ? 'initial' : 'hidden'}
+            animate={windowDimensions.width > 550 ? 'view' : 'hidden'}
             whileHover="hover"
             whileTap="tap"
+            onClick={() => handleClick(heroRef)}
           >
             Home
           </motion.button>
           <motion.button
             className="header__element"
             variants={btnVariants}
-            initial="initial"
-            animate="view"
+            initial={windowDimensions.width > 550 ? 'initial' : 'hidden'}
+            animate={windowDimensions.width > 550 ? 'view' : 'hidden'}
             whileHover="hover"
             whileTap="tap"
+            onClick={() => handleClick(aboutRef)}
           >
             About
           </motion.button>
@@ -111,36 +142,44 @@ export default function Header() {
             src={circle}
             className="header__center-circle"
             variants={circleVariants}
+            initial={windowDimensions.width > 550 ? 'initial' : 'initialSmall'}
+            animate={windowDimensions.width > 550 ? 'view' : 'viewSmall'}
           />
           <motion.img
             src={square}
             className="header__center-square"
             variants={squareVariants}
+            initial={windowDimensions.width > 550 ? 'initial' : 'initialSmall'}
+            animate={windowDimensions.width > 550 ? 'view' : 'viewSmall'}
           />
           <motion.img
             src={orange}
             className="header__center-orange"
             variants={orangeVariants}
+            initial={windowDimensions.width > 550 ? 'initial' : 'initialSmall'}
+            animate={windowDimensions.width > 550 ? 'view' : 'viewSmall'}
           />
         </div>
         <div className="header__container">
           <motion.button
             className="header__element"
             variants={btnVariants}
-            initial="initial"
-            animate="view"
+            initial={windowDimensions.width > 550 ? 'initial' : 'hidden'}
+            animate={windowDimensions.width > 550 ? 'view' : 'hidden'}
             whileHover="hover"
             whileTap="tap"
+            onClick={() => handleClick(projectsRef)}
           >
             Projects
           </motion.button>
           <motion.button
             className="header__element"
             variants={btnVariants}
-            initial="initial"
-            animate="view"
+            initial={windowDimensions.width > 550 ? 'initial' : 'hidden'}
+            animate={windowDimensions.width > 550 ? 'view' : 'hidden'}
             whileHover="hover"
             whileTap="tap"
+            onClick={() => handleClick(contactRef)}
           >
             Contact
           </motion.button>

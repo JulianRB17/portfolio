@@ -26,7 +26,7 @@
   left: 0;
   right: 0;
   background-color: aliceblue;
-  opacity: 0.5;
+  opacity: 0.75;
 }
 
 .contact__title {
@@ -46,10 +46,123 @@
   z-index: 1;
   display: flex;
   align-items: center;
-  padding-top: 15px;
+  padding: 10px 7px 4px 0;
+  height: max-content;
+}
+
+.contact__form {
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  width: 100%;
+  padding-bottom: 5px;
+}
+
+.contact__input-element {
+  display: flex;
+  padding: 15px 0 2px 20px;
+  align-items: center;
+}
+
+.contact__label {
+  padding-right: 10px;
+  color: rgb(34, 63, 91);
+  font-size: 13px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.contact__input {
+  width: 50%;
+  min-width: 150px;
+  border-radius: 7px;
+  border: 0;
+  color: rgb(62, 96, 188);
+  padding: 3px;
+  /* font-family: 'Courier New', Courier, monospace; */
+}
+
+.contact__input::placeholder {
+  color: lightslategray;
+  font-family: Lemon;
+  font-size: 10px;
+}
+
+.contact__input:focus {
+  outline: none;
+  box-shadow: 0 0 0 1px blueviolet;
+}
+
+textarea.contact__input {
+  height: 50px;
 }
 
 .contact__btn {
-  margin-left: 10px;
   font-family: Lemon;
+  width: 100px;
+  outline: none;
+  font-size: 12px;
+}
+
+.contact__call-to-action {
+  color: rgb(62, 96, 188);
+  font-size: 20px;
+}
+
+.contact__text {
+  font-size: 12px;
+}
+
+.contact__sbmt-btn {
+  margin: 20px 20px 20px auto;
+  width: 100px;
+}
+
+@media screen and (max-width: 600px) {
+  .contact {
+    padding: 20px;
+  }
+
+  .contact__container {
+    padding: 10px 20px;
+  }
+
+  .contact__title {
+    font-size: 25px;
+  }
+
+  .contact__subtitle {
+    font-size: 20px;
+    width: 75%;
+    margin: auto auto 40px 0;
+  }
+
+  .contact__element {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contact__text {
+    font-size: 12px;
+  }
+
+  .contact__btn {
+    margin: 10px 0 0 0;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .contact {
+    padding: 10px;
+  }
+
+  .contact__container {
+    padding: 10px 10px;
+  }
+
+  .contact__input {
+    min-width: 75px;
+    font-size: 10px;
+  }
 }

@@ -1,9 +1,13 @@
+.hero-container {
+  position: relative;
+}
+
 .hero {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-image: url(../../images/white_marble.jpg);
-  background-size: cover;
+  /* background-image: url(../../images/white_marble.jpg);
+  background-size: cover; */
 }
 
 .hero__presentation-container {
@@ -19,6 +23,7 @@
   text-align: right;
   font-size: 50px;
   line-height: 150%;
+  text-shadow: 0px 3px 2px white;
 }
 
 .hero__img {
@@ -34,6 +39,7 @@
   text-align: left;
   font-size: 27px;
   line-height: 150%;
+  text-shadow: 0px 3px 2px white;
 }
 
 .hero__quote-container {
@@ -75,7 +81,7 @@
   bottom: 0;
   left: 0;
   right: 0;
-  opacity: 0.4;
+  opacity: 0.8;
 }
 
 .hero__description-title {
@@ -91,4 +97,58 @@
   text-align: center;
   position: relative;
   z-index: 2;
+}
+
+@media screen and (max-width: 900px) {
+  .hero__presentation-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero__name {
+    width: 80%;
+    margin: 40px 0;
+    text-align: center;
+    font-size: 35px;
+  }
+
+  .hero__img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .hero__presentation {
+    width: 80%;
+    margin: 40px 0;
+    text-align: center;
+    font-size: 20px;
+  }
+
+  .hero__quote-container {
+    width: 65%;
+    margin-top: 30px;
+    padding: 20px 30px;
+  }
+
+  .hero__quote {
+    font-size: 20px;
+  }
+
+  .hero__quote-author {
+    font-size: 15px;
+  }
+
+  .hero__description-container {
+    margin: 45px 0;
+    padding: 20px;
+  }
+
+  .hero__description-title {
+    font-size: 15px;
+  }
+
+  .hero__description {
+    padding-top: 15px;
+    font-size: 15px;
+  }
 }

@@ -2,17 +2,36 @@ import React from 'react';
 import aroundPic from '../../images/around.png';
 import mantikaPic from '../../images/mantika.png';
 
-import { motion } from 'framer-motion';
+import { easeInOut, motion } from 'framer-motion';
 
-export default function Projects({ scrollVariants, btnVariants }) {
+export default function Projects({
+  scrollVariants,
+  btnVariants,
+  projectsRef,
+  windowDimensions,
+}) {
+  const imgVariants = {
+    initial: { y: 30, opacity: 0.8 },
+    view: {
+      y: 0,
+      opacity: 1,
+      transition: { duration: 1, ease: easeInOut, delay: 0.1 },
+    },
+  };
+
+  const { width } = windowDimensions;
+
   return (
-    <section className="projects">
+    <section className="projects" ref={projectsRef}>
       <h1 className="projects__title">&lt;Projects&gt;</h1>
       <div className="projects__container">
-        <img
+        <motion.img
           alt="Around screenshots"
           className="projects__pic"
           src={aroundPic}
+          variants={imgVariants}
+          initial="initial"
+          whileInView="view"
         />
         <motion.div
           className="projects__text-container"
@@ -30,26 +49,34 @@ export default function Projects({ scrollVariants, btnVariants }) {
             JavaScript, the second one was build with React. The backend is
             created with NodeJS, Express and Mongoose.
           </p>
-          <p className="projects__text">Links:</p>
+          <p className="projects__text projects__text-link">Link:</p>
           <motion.button
             className="projects__link"
             variants={btnVariants}
             whileHover="hover"
             whileTap="tap"
           >
-            Github
+            <a
+              href="https://github.com/JulianRB17/react-around-api-full_es"
+              className="project__link"
+            >
+              Github{' '}
+            </a>
           </motion.button>
-          <motion.button
+          {/* <motion.button
             className="projects__link"
             variants={btnVariants}
             whileHover="hover"
             whileTap="tap"
           >
             Page
-          </motion.button>
+          </motion.button> */}
         </motion.div>
       </div>
-      <div className="projects__container">
+      <div
+        className="projects__container"
+        style={width < 900 ? { flexDirection: 'column-reverse' } : {}}
+      >
         <motion.div
           className="projects__text-container"
           variants={scrollVariants}
@@ -66,28 +93,31 @@ export default function Projects({ scrollVariants, btnVariants }) {
             Techs used: The frontend is builded with React. The backend is
             created with NodeJS, Express and Mongoose.
           </p>
-          <p className="projects__text">Links:</p>
+          <p className="projects__text projects__text-link">Link:</p>
           <motion.button
             className="projects__link"
             variants={btnVariants}
             whileHover="hover"
             whileTap="tap"
           >
-            Github
+            <a href="https://github.com/JulianRB17/mantika-full-api">Github</a>
           </motion.button>
-          <motion.button
+          {/* <motion.button
             className="projects__link"
             variants={btnVariants}
             whileHover="hover"
             whileTap="tap"
           >
             Page
-          </motion.button>
+          </motion.button> */}
         </motion.div>
-        <img
+        <motion.img
           alt="Mantika screenshots"
           className="projects__pic"
           src={mantikaPic}
+          variants={imgVariants}
+          initial="initial"
+          whileInView="view"
         />
       </div>
     </section>

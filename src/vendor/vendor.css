@@ -2,6 +2,17 @@ body {
   margin: 0;
   box-sizing: border-box;
   height: 100vh;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(62, 96, 188);
+}
+
+a:visited {
+  color: rgb(62, 96, 188);
 }
 
 h1 {

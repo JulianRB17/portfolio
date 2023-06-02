@@ -1,0 +1,11 @@
+Model Information:
+* title:	Abstract 2
+* source:	https://sketchfab.com/3d-models/abstract-2-42d2b7e6b3d542f6a7ed8a828b82fce0
+* author:	tahsinpulok (https://sketchfab.com/tahsinpulok)
+
+Model License:
+* license type:	CC-BY-NC-ND-4.0 (http://creativecommons.org/licenses/by-nc-nd/4.0/)
+* requirements:	Author must be credited. No commercial use. Modified versions can not be distributed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Abstract 2" (https://sketchfab.com/3d-models/abstract-2-42d2b7e6b3d542f6a7ed8a828b82fce0) by tahsinpulok (https://sketchfab.com/tahsinpulok) licensed under CC-BY-NC-ND-4.0 (http://creativecommons.org/licenses/by-nc-nd/4.0/)

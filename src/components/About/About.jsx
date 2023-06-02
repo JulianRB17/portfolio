@@ -2,21 +2,51 @@ import React from 'react';
 import codePhoto from '../../images/magnetar_code.jpg';
 import { motion } from 'framer-motion';
 
-export default function About({ scrollVariants }) {
+export default function About({aboutRef}) {
+  const scrollLeftVariants = {
+    initial: { opacity: 0.5, x: -30 },
+    view: {
+      x: 0,
+      opacity: 1,
+      transition: { duration: 1, delay: 0.1 },
+    },
+  };
+
+  const scrollRightVariants = {
+    initial: { opacity: 0.5, x: 30 },
+    view: {
+      x: 0,
+      opacity: 1,
+      transition: { duration: 1, delay: 0.1 },
+    },
+  };
+
   return (
-    <section className="about">
-      <h3 className="about__intro-text">
-        A beautiful code is one that is elegant, efficient and minimalistic. Who
-        doesn't want something simple solving our lives?
-      </h3>
-      <motion.div
-        className="about__container"
-        variants={scrollVariants}
+    <section className="about" ref ={aboutRef}>
+      <motion.h3
+        className="about__intro-text"
+        variants={scrollLeftVariants}
         initial="initial"
         whileInView="view"
       >
-        <img alt="art and code" src={codePhoto} className="about__pic" />
-        <div className="about__text-container">
+        A beautiful code is one that is elegant, efficient and minimalistic. Who
+        doesn't want something simple solving our lives?
+      </motion.h3>
+      <div className="about__container">
+        <motion.img
+          alt="art and code"
+          src={codePhoto}
+          className="about__pic"
+          variants={scrollLeftVariants}
+          initial="initial"
+          whileInView="view"
+        />
+        <motion.div
+          className="about__text-container"
+          initial="initial"
+          whileInView="view"
+          variants={scrollRightVariants}
+        >
           <h2 className="about__title">&lt;About me&gt;</h2>
           <p className="about__paragraph">
             As a teenager I wanted to be Batman or maybe the one who could
@@ -44,8 +74,8 @@ export default function About({ scrollVariants }) {
             artists to artists, it's called Mantika. Soon it will be ready to be
             outside.
           </p>
-        </div>
-      </motion.div>
+        </motion.div>
+      </div>
     </section>
   );
 }
