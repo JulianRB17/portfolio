@@ -12,26 +12,26 @@ a {
 }
 
 a:visited {
-  color: rgb(62, 96, 188);
+  color: #009299;
 }
 
 h1 {
   margin: 0;
   font-family: Lemon;
-  color: rgb(34, 63, 91);
+  color: #009299;
 }
 
 h2 {
   margin: 0;
   font-family: Lemon;
-  color: rgb(34, 63, 91);
+  color: #009299;
 }
 
 p {
   margin: 0;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
     'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  color: rgb(34, 63, 91);
+  color: #181e27;
 }
 
 button {
@@ -44,7 +44,7 @@ button {
   border-radius: 15px;
   font-family: Lemon;
   font-size: 15px;
-  color: rgb(62, 96, 188);
+  color: #009299;
 }
 
 .hidden {

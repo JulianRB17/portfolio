@@ -97,7 +97,8 @@ function Animation({ mousePosition, windowDimensions, modelRef }) {
           form="ring"
           // color="#B9E9FF"
           // color="#181e27"
-          color="#009299"
+          // color="#009299"
+          color="#4b007a"
           rotation-y={Math.PI / 2}
           position={[-5, 2, -1]}
           scale={[10, 10, 1]}
@@ -108,6 +109,7 @@ function Animation({ mousePosition, windowDimensions, modelRef }) {
           form="ring"
           // color="#B9E9FF"
           // color="#009299"
+          // color="#4b007a"
           color="#181e27"
           rotation-y={Math.PI / 2}
           position={[5, -2, 1]}

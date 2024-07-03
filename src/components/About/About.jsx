@@ -23,6 +23,7 @@ export default function About({ aboutRef }) {
 
   return (
     <section className="about" ref={aboutRef}>
+      <h2 className="about__title">&lt;About me&gt;</h2>
       <motion.h3
         className="about__intro-text"
         variants={scrollLeftVariants}
@@ -46,7 +47,6 @@ export default function About({ aboutRef }) {
           whileInView="view"
           variants={scrollRightVariants}
         >
-          <h2 className="about__title">&lt;About me&gt;</h2>
           <p className="about__paragraph">
             As a teenager, I dreamt of being Batman or inventing a flying car
             like Doc Emmet Brown. I longed to create something remarkable. Then,
