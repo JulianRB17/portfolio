@@ -68,6 +68,9 @@ export default function Hero({ scrollVariants, setMousePosition }) {
 
   return (
     <section className="hero" onMouseMove={handleMouseMove} id="hero">
+      <h1 className="hero__hook">
+        Your vision, a little coding, infinite possibilities
+      </h1>
       <div className="hero__presentation-container">
         <motion.h1
           className="hero__name"
@@ -91,8 +94,10 @@ export default function Hero({ scrollVariants, setMousePosition }) {
           initial={['initial', 'right']}
           animate="view"
         >
-          Javascript web developer with an arts background and a passion for the
-          endless possibilities of coding.
+          A junior JavaScript developer with an arts background: transforms your
+          web ideas into stunning digital realities. Elevate your web presence
+          with unique solutions that capture your vision and engage your
+          audience.
         </motion.h2>
       </div>
       <motion.div
@@ -125,26 +130,26 @@ export default function Hero({ scrollVariants, setMousePosition }) {
           &lt;Art and coding, coding and art&gt;
         </h2>
         <p className="hero__description">
-          I have a theater direction, production and acting background: I know
-          my way with words, I know how to administrate and I know how failure
-          is just a step to achieve a goal.
+          With a background in theater direction, production, and acting, I
+          possess a deep understanding of the power of words, effective
+          administration, and the inevitability of failure as a stepping stone
+          to success.
         </p>
         <p className="hero__description">
-          As someone with a theater background I have studied for a long time
-          human interactions, human condition and experimenting with concepts
-          and feelings through my body or the bodies of other people. I have
-          found the same possibility as a web developer: the possibility of
-          creation, not on the human body but through a language that
-          materializes itself on a screen. The origin is the same: how to do
-          this?
+          My experience in theater has equipped me with insights into human
+          interactions and the human condition, allowing me to explore concepts
+          and emotions through my own body and those of others. Transitioning to
+          web development, I found a similar creative outlet, where I can
+          materialize ideas on a screen through code.
         </p>
         <p className="hero__description">
-          Human creativity is the basis to our development.
+          The essence remains: how can we create something meaningful? Human
+          creativity fuels our growth.
         </p>
         <p className="hero__description">
-          It was not easy for me to be here: I believe in hard work and in
-          discipline as the basis of creation. The ability to imagine works only
-          when we dedicate ourselves to our work.
+          Achieving my current skills required hard work and discipline. I
+          firmly believe that imagination thrives when we are dedicated to our
+          craft.
         </p>
         <div className="hero__description-overlay" />
       </motion.div>

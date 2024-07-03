@@ -51,8 +51,7 @@ export default function Contact({ scrollVariants, contactRef }) {
     e.preventDefault();
     setLoading(true);
     try {
-      const result = 'wenas';
-      await emailjs.sendForm(
+      const result = await emailjs.sendForm(
         process.env.REACT_APP_EMAILJS_SERVICE_ID,
         process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
         formRef.current,
@@ -78,7 +77,7 @@ export default function Contact({ scrollVariants, contactRef }) {
 
   return (
     <section className="contact" ref={contactRef}>
-      <h1 className="contact__subtitle">Wanna create? Let's start.</h1>
+      <h1 className="contact__subtitle">Let's Bring Your Vision to Life!</h1>
 
       <motion.div
         className="contact__container"

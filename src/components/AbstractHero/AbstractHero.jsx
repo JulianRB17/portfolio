@@ -1,7 +1,7 @@
 import { Environment, Lightformer } from '@react-three/drei';
 import { Canvas, useFrame, useLoader, useThree } from '@react-three/fiber';
 import { easing } from 'maath';
-import { Suspense, useRef, useState } from 'react';
+import { Suspense, useRef } from 'react';
 import { TextureLoader } from 'three';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 
@@ -85,16 +85,19 @@ function Animation({ mousePosition, windowDimensions, modelRef }) {
   return (
     <Environment
       frames={Infinity}
-      preset="city"
       resolution={256}
       background
       blur={0.8}
+      //     preset="city"
+      // path="/hdri/" files="potsdamer_platz_1k.hdr"
     >
       <group ref={groupRef}>
         <Lightformer
           intensity={1}
           form="ring"
-          color="#B9E9FF"
+          // color="#B9E9FF"
+          // color="#181e27"
+          color="#009299"
           rotation-y={Math.PI / 2}
           position={[-5, 2, -1]}
           scale={[10, 10, 1]}
@@ -103,7 +106,9 @@ function Animation({ mousePosition, windowDimensions, modelRef }) {
         <Lightformer
           intensity={1}
           form="ring"
-          color="#B9E9FF"
+          // color="#B9E9FF"
+          // color="#009299"
+          color="#181e27"
           rotation-y={Math.PI / 2}
           position={[5, -2, 1]}
           scale={[10, 10, 1]}

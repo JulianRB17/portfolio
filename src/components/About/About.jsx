@@ -2,7 +2,7 @@ import React from 'react';
 import codePhoto from '../../images/magnetar_code.jpg';
 import { motion } from 'framer-motion';
 
-export default function About({aboutRef}) {
+export default function About({ aboutRef }) {
   const scrollLeftVariants = {
     initial: { opacity: 0.5, x: -30 },
     view: {
@@ -22,15 +22,14 @@ export default function About({aboutRef}) {
   };
 
   return (
-    <section className="about" ref ={aboutRef}>
+    <section className="about" ref={aboutRef}>
       <motion.h3
         className="about__intro-text"
         variants={scrollLeftVariants}
         initial="initial"
         whileInView="view"
       >
-        A beautiful code is one that is elegant, efficient and minimalistic. Who
-        doesn't want something simple solving our lives?
+        Bringing Creativity to Your Digital World
       </motion.h3>
       <div className="about__container">
         <motion.img
@@ -49,30 +48,23 @@ export default function About({aboutRef}) {
         >
           <h2 className="about__title">&lt;About me&gt;</h2>
           <p className="about__paragraph">
-            As a teenager I wanted to be Batman or maybe the one who could
-            invent a flying car, kind of Doc Emmet Brown. I wanted to create
-            something. And then: BOOM! Just like that I fell in love, with a
-            girl, yes, but more importantly, with theater. A place to experiment
-            humanity, reality and poetry through my body. I found a way to
-            create. But something was missing. Years passed, and then another
-            BOOM: 2020 happened. There I embraced our weakness, and without
-            having the possibility to join with other people I needed to find a
-            different way to express my creativity, so I turned back and talked
-            a little with the teenager Julián, he may had an idea… And he did. I
-            learned how to code, from HTML to CSS was kinda easy. And then
-            JavaScript opened the door: the possibilities were endless. React
-            found a way to bring structure and NodeJS showed complexity. So,
-            here I am, a weird dude that can do both: theater and coding. So…
-            let's talk about coding.
+            As a teenager, I dreamt of being Batman or inventing a flying car
+            like Doc Emmet Brown. I longed to create something remarkable. Then,
+            BOOM! I fell in love—not just with a girl but more profoundly with
+            theater. It became a space where I could explore humanity, reality,
+            and poetry through my body. Yet, something was still missing. Years
+            flew by, and then another BOOM: 2020 hit. During that time, I
+            embraced our collective vulnerability. Without the chance to connect
+            with others physically, I sought a new avenue for my creativity. I
+            revisited my younger self, and he had an idea. I delved into coding,
+            starting with HTML and CSS, which were relatively straightforward.
+            Then JavaScript opened a world of endless possibilities. React
+            introduced structure, and NodeJS revealed complexity. So, here I am,
+            a unique blend of theater and coding. Let's dive into the world of
+            code together!
           </p>
           <p className="about__paragraph">
-            JavaScript is my origin. My first step into this creation. Someday I
-            want to play with Python.
-          </p>
-          <p className="about__paragraph">
-            I have a personal project that joins both passions: A web from
-            artists to artists, it's called Mantika. Soon it will be ready to be
-            outside.
+            JavaScript is my origin. My first step into this creation.
           </p>
         </motion.div>
       </div>
