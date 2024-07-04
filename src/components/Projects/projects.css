@@ -1,9 +1,10 @@
 .projects {
   display: flex;
   flex-direction: column;
-  background-image: url(../../images/colors_marble.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
+  /* background-image: url(../../images/colors_marble.jpg); */
+  background-color: #181e27;
+  /* background-repeat: no-repeat;
+  background-size: cover; */
   align-items: center;
   padding: 60px 0 60px;
 }
@@ -12,17 +13,31 @@
   margin: 0;
   padding: 40px;
   font-size: 40px;
-  color: rgb(62, 96, 188);
+  color: #009299;
 }
 
 .projects__container {
   display: flex;
-  padding: 20px;
+  margin: 20px;
   align-items: center;
+  position: relative;
+  /* background-color: #009299; */
+  background: linear-gradient(
+    0deg,
+    rgba(2, 116, 121, 1) 6%,
+    rgba(0, 146, 153, 1) 80%
+  );
+  border-radius: 10px;
+  max-width: 1200px;
+  width: 90%;
 }
 
 .projects__pic {
-  width: 45%;
+  width: 50%;
+  margin: 1%;
+  background-color: aliceblue;
+  border-radius: 20px;
+  padding: 2%;
 }
 
 .projects__text-container {
@@ -34,24 +49,32 @@
 
 .projects__name {
   font-size: 25px;
+  color: #181e27;
 }
 
 .projects__text {
   text-align: justify;
   padding-top: 20px;
   align-self: flex-start;
+  color: aliceblue;
 }
 
 .projects__text-link {
   font-weight: bold;
+  color: #181e27;
 }
 
 .projects__link {
   align-self: baseline;
-  margin-top: 20px;
+  margin: 20px 0;
   background-color: transparent;
   box-shadow: none;
   text-decoration: none;
+  color: #4b007a;
+}
+
+.projects__link:visited {
+  color: #4b007a;
 }
 
 @media screen and (max-width: 900px) {

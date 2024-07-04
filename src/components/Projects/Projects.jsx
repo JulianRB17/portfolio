@@ -59,7 +59,7 @@ export default function Projects({
           >
             <a
               href="https://github.com/JulianRB17/react-around-api-full_es"
-              className="project__link"
+              className="projects__link"
             >
               Github{' '}
             </a>
@@ -103,7 +103,12 @@ export default function Projects({
             whileHover="hover"
             whileTap="tap"
           >
-            <a href="https://github.com/JulianRB17/mantika-full-api">Github</a>
+            <a
+              className="projects__link"
+              href="https://github.com/JulianRB17/mantika-full-api"
+            >
+              Github
+            </a>
           </motion.button>
           {/* <motion.button
             className="projects__link"
@@ -159,7 +164,10 @@ export default function Projects({
             whileHover="hover"
             whileTap="tap"
           >
-            <a href="https://github.com/JulianRB17/timidez-frontend">
+            <a
+              className="projects__link"
+              href="https://github.com/JulianRB17/timidez-frontend"
+            >
               Frontend on Github
             </a>
           </motion.button>
@@ -170,7 +178,10 @@ export default function Projects({
             whileHover="hover"
             whileTap="tap"
           >
-            <a href="https://github.com/JulianRB17/timidez-backend-active">
+            <a
+              className="projects__link"
+              href="https://github.com/JulianRB17/timidez-backend-active"
+            >
               Backend on Github
             </a>
           </motion.button>
