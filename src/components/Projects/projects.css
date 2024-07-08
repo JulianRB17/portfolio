@@ -6,7 +6,7 @@
   /* background-repeat: no-repeat;
   background-size: cover; */
   align-items: center;
-  padding: 60px 0 60px;
+  padding: 60px 0;
 }
 
 .projects__title {
@@ -18,7 +18,7 @@
 
 .projects__container {
   display: flex;
-  margin: 20px;
+  margin: 20px 0;
   align-items: center;
   position: relative;
   /* background-color: #009299; */
@@ -95,6 +95,10 @@
   .projects__container {
     padding: 10px;
     flex-direction: column;
+  }
+
+  .projects__container_reversed {
+    flex-direction: column-reverse;
   }
 
   .projects__pic {

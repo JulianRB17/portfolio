@@ -2,11 +2,10 @@
   display: flex;
   position: fixed;
   height: 46px;
-  z-index: 3;
+  z-index: 2;
   width: 100vw;
   justify-content: center;
-  border-bottom: 1px solid gray;
-  background-color: beige;
+  background-color: #009299;
   opacity: 0.9;
 }
 
@@ -18,6 +17,7 @@
 .header__element {
   margin: 10px auto;
   outline: none;
+  color: aliceblue;
 }
 
 .header__center {
@@ -42,10 +42,10 @@
 
 .header__scroller {
   position: fixed;
-  height: 4px;
+  height: 1vh;
   opacity: 0.7;
   width: 100vw;
-  background-color: orange;
+  background-color: #fc6a37;
   top: 46px;
   z-index: 2;
   transform-origin: 0%;

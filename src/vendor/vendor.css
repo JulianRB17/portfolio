@@ -6,6 +6,10 @@ body {
   overflow-x: hidden;
 }
 
+html {
+  width: 100vw;
+}
+
 a {
   text-decoration: none;
   color: rgb(62, 96, 188);

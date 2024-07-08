@@ -124,6 +124,39 @@ export default function Contact({ scrollVariants, contactRef }) {
                 minLength={15}
               />
             </div>
+            {/* <div className="contact__labels">
+              <label className="contact__label">Your name:</label>
+              <label className="contact__label">Your email:</label>
+              <label className="contact__label">Your message:</label>
+            </div>
+            <div className="contact__inputs">
+              <input
+                className="contact__input"
+                type="text"
+                name="name"
+                onChange={handleChange}
+                value={form.name}
+                required
+                minLength={7}
+              />
+              <input
+                className="contact__input"
+                type="email"
+                name="email"
+                onChange={handleChange}
+                value={form.email}
+                required
+                minLength={10}
+              />
+              <textarea
+                className="contact__input"
+                name="message"
+                value={form.message}
+                onChange={handleChange}
+                required
+                minLength={15}
+              />
+            </div> */}
           </div>
           {loading ? (
             <motion.button type="submit" className="contact__sbmt-btn" disabled>

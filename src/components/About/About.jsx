@@ -1,5 +1,5 @@
 import React from 'react';
-import codePhoto from '../../images/magnetar_code.jpg';
+import codePhoto from '../../images/obscenos-code.png';
 import { motion } from 'framer-motion';
 
 export default function About({ aboutRef }) {
@@ -52,8 +52,10 @@ export default function About({ aboutRef }) {
             like Doc Emmet Brown. I longed to create something remarkable. Then,
             BOOM! I fell in love—not just with a girl but more profoundly with
             theater. It became a space where I could explore humanity, reality,
-            and poetry through my body. Yet, something was still missing. Years
-            flew by, and then another BOOM: 2020 hit. During that time, I
+            and poetry through my body. Yet, something was still missing.
+          </p>
+          <p className="about__paragraph">
+            Years flew by, and then another BOOM: 2020 hit. During that time, I
             embraced our collective vulnerability. Without the chance to connect
             with others physically, I sought a new avenue for my creativity. I
             revisited my younger self, and he had an idea. I delved into coding,
@@ -62,9 +64,6 @@ export default function About({ aboutRef }) {
             introduced structure, and NodeJS revealed complexity. So, here I am,
             a unique blend of theater and coding. Let's dive into the world of
             code together!
-          </p>
-          <p className="about__paragraph">
-            JavaScript is my origin. My first step into this creation.
           </p>
         </motion.div>
       </div>

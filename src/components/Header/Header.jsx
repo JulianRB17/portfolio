@@ -48,8 +48,9 @@ export default function Header({ refs, windowDimensions }) {
     initial: { height: '75vh' },
     view: {
       rotate: [0, 360, 180, 0],
-      height: ['80vh', '60vh', '80vh', '6vh'],
+      height: ['80vh', '60vh', '80vh', '1vh'],
       maxHeight: [1000, 1000, 1000, 40],
+      width: ['80vh', '60vh', '80vh', '1vh'],
       transition: { duration: 3.5 },
     },
     initialSmall: { width: '75vh' },
@@ -100,6 +101,7 @@ export default function Header({ refs, windowDimensions }) {
   };
 
   const handleClick = (section) => {
+    console.log(section);
     window.scrollTo({ behavior: 'smooth', top: section.current.offsetTop });
   };
 

@@ -74,10 +74,7 @@ export default function Projects({
           </motion.button> */}
         </motion.div>
       </div>
-      <div
-        className="projects__container"
-        style={width < 900 ? { flexDirection: 'column-reverse' } : {}}
-      >
+      <div className="projects__container projects__container_reversed">
         <motion.div
           className="projects__text-container"
           variants={scrollVariants}
@@ -128,10 +125,7 @@ export default function Projects({
           whileInView="view"
         />
       </div>
-      <div
-        className="projects__container"
-        style={width < 900 ? { flexDirection: 'column-reverse' } : {}}
-      >
+      <div className="projects__container">
         <motion.img
           alt="Curso screenshots"
           className="projects__pic"
