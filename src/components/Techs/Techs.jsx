@@ -1,5 +1,4 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 
 import htmlLogo from '../../images/html.png';
 import cssLogo from '../../images/css.png';
