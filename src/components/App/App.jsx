@@ -6,6 +6,7 @@ import Header from '../Header/Header';
 import './App.css';
 import AbstractHero from '../AbstractHero/AbstractHero';
 import { useState, useRef, useEffect } from 'react';
+import Techs from './../Techs/Techs';
 
 function App() {
   const [mousePosition, setMousePosition] = useState();
@@ -76,6 +77,7 @@ function App() {
         projectsRef={projectsRef}
         windowDimensions={windowDimensions}
       />
+      <Techs scrollVariants={scrollVariants} />
       <Contact scrollVariants={scrollVariants} contactRef={contactRef} />
     </>
   );
